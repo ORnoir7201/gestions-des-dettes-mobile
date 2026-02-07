@@ -32,9 +32,9 @@ import retrofit2.http.Query;
 public class SupabaseService {
 
     private static final String BASE_URL =
-            "https://rcncqhkfwkxglecmjarq.supabase.co/";
+            "VOTRE_URL_SUPABASE_ICI";
     private static final String API_KEY =
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJjbmNxaGtmd2t4Z2xlY21qYXJxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk2OTAwODIsImV4cCI6MjA4NTI2NjA4Mn0.UFMt3IQG0tHDnY1_MJgZY66h76VzZFDuLf-MdDffabc";
+            "VOTRE_API_KEY_ICI";
 
     private static final String AUTH =
             "Bearer " + API_KEY;

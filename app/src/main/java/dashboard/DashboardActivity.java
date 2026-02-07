@@ -263,8 +263,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
         String email = SupabaseService.getInstance().getCurrentUserEmail(this);
 
-        tvUserName.setText("BOUTIQUE DE");
-        tvUserEmail.setText(email != null ? email : "Utilisateur");
+        tvUserName.setText("CARNET DE DETTES");
+        tvUserEmail.setText(email != null ? email : "");
     }
 
 
