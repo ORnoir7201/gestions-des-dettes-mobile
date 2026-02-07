@@ -1,35 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="12dp"
-    android:layout_marginBottom="8dp"
-    android:background="@android:color/white"
-    android:elevation="2dp">
+    android:padding="16dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="6dp"
+    android:background="@drawable/card_background"
+    android:elevation="3dp"
+    android:outlineProvider="bounds">
 
-    <TextView
-        android:id="@+id/tvClient"
-        android:layout_width="wrap_content"
+    <!-- En-tête avec nom client et montant -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nom Prénom"
-        android:textStyle="bold"
-        android:textSize="16sp"/>
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/tvMontant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3000 FCFA"
-        android:textStyle="bold"
-        android:layout_marginTop="4dp"/>
+        <!-- Nom du client -->
+        <TextView
+            android:id="@+id/tvClient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nom Prénom"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"/>
 
-    <TextView
-        android:id="@+id/tvDate"
-        android:layout_width="wrap_content"
+        <!-- Montant avec badge coloré -->
+        <TextView
+            android:id="@+id/tvMontant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+3 000 FCFA"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/badge_paiement"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"/>
+
+    </LinearLayout>
+
+    <!-- Ligne séparatrice -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        android:layout_marginVertical="8dp"/>
+
+    <!-- Date et informations -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2024-01-01"
-        android:textSize="12sp"
-        android:layout_marginTop="2dp"/>
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Icône calendrier -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅"
+            android:textSize="14sp"
+            android:layout_marginEnd="6dp"/>
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01 janvier 2024"
+            android:textColor="#757575"
+            android:textSize="14sp"/>
+
+        <!-- Espaceur -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <!-- Heure -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14:30"
+            android:textColor="#757575"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <!-- Description (optionnelle) -->
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paiement reçu"
+        android:textColor="#9E9E9E"
+        android:textSize="13sp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="2"/>
 
 </LinearLayout>
