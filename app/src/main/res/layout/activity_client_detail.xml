@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ===== CLIENT INFO ===== -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_person"
+                android:contentDescription="Client"
+
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/tvClientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom Prénom"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#212121"/>
+
+        </LinearLayout>
+
+        <!-- Téléphone avec icône -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_phone"
+                android:contentDescription="Téléphone"
+
+                android:layout_marginEnd="6dp"/>
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Téléphone"
+                android:textColor="#757575"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <!-- Adresse avec icône -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="2dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_location"
+                android:contentDescription="Adresse"
+
+                android:layout_marginEnd="6dp"/>
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adresse"
+                android:textColor="#757575"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <!-- ===== SOLDE ===== -->
+        <TextView
+            android:id="@+id/tvSolde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solde dû : 0 FCFA"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#D32F2F"
+            android:layout_marginTop="24dp"
+            android:padding="12dp"
+            android:background="#FFF3F3"/>
+
+        <!-- ===== DETTES ===== -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dettes"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDettes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <!-- ===== PAIEMENTS ===== -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paiements"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPaiements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <!-- ===== ACTIONS ===== -->
+        <Button
+            android:id="@+id/btnAddDette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AJOUTER UNE DETTE"
+            android:layout_marginTop="24dp"/>
+
+        <Button
+            android:id="@+id/btnAddPaiement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AJOUTER UN PAIEMENT"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</ScrollView>
